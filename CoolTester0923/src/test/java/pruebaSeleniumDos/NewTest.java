@@ -8,6 +8,7 @@ public class NewTest {
   @Test
   public void f() {
 	  
+	  //Double slash to add comments
 	  WebDriver driver = new ChromeDriver();
 	  driver.get("https://www.google.com");
 		
