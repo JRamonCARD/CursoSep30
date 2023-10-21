@@ -26,6 +26,13 @@ public class LoginPage {
 	@FindBy(id = "login-button")
 	private WebElement btnLogin;
 	
+	@FindBy(xpath = "//*[@data-test= 'error']")
+	private WebElement errorBox;
+	
+	
+	
+	
+	
 	//Metodo llamadao "login" para hacer el login en la LoginPage
 	public void  login(String user, String pwd) {
 		
@@ -33,6 +40,12 @@ public class LoginPage {
 		WrapClasses.sendKeys(pswTxt, pwd);
 		WrapClasses.click(btnLogin);
 		
+	}
+	
+	//Metodo para guardar en una variable tipo boolean  el contenido del elemento "errorbox" despues validar que contenga el text que pude en contains
+	public boolean validateLockedError() {
+		boolean errorDisplayed = WrapClasses.getText(errorBox).contains("Sorry, this user has been locked out");
+		return errorDisplayed;
 	}
 
 }

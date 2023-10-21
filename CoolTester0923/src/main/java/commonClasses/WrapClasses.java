@@ -13,5 +13,9 @@ public class WrapClasses {
 	public static void sendKeys (WebElement webelementUI, String text) {
 		webelementUI.sendKeys(text);
 	}
+	
+	public static String getText (WebElement webelementUI) {
+		return webelementUI.getText();
 
+	}
 }
