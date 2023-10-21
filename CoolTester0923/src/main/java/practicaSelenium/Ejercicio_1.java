@@ -87,7 +87,7 @@ public class Ejercicio_1 {
 		
 		String compraCompleta = "Thank you for your order!";
 		
-		if (compraCompleta == thxOrder) 
+		if ( compraCompleta.contains(thxOrder)) 
 			{
 				System.out.println("La compra se realizo correctamente");
 			}
