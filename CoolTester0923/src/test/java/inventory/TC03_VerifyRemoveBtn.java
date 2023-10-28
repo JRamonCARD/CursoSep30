@@ -1,4 +1,4 @@
-package loginTests;
+package inventory;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -9,16 +9,18 @@ import org.testng.annotations.Test;
 import commonClasses.DriverSetup;
 import commonClasses.GlobalVariables;
 import commonClasses.WrapClasses;
+import navigationPages.InventoryPage;
 import navigationPages.LoginPage;
 
-public class TC02_Login_Lock {
+public class TC03_VerifyRemoveBtn {
 	
 	//Declarar e inicializar el WebDriver
 	WebDriver driver = DriverSetup.setDriver();
 	
 	
-	//Objetos de la login page
+	//Page Objects
 	LoginPage loginPage = new LoginPage(driver);
+	InventoryPage inventory = new InventoryPage(driver);
 	
    
 	@BeforeTest
@@ -28,21 +30,17 @@ public class TC02_Login_Lock {
 	
 	
     @Test
-    public void TC02() {
+    public void TC03() {
     	
-    	loginPage.login(GlobalVariables.LOCK_USER, GlobalVariables.STANDARD_PASSWORD);
+    	loginPage.login(GlobalVariables.STANDARD_USER, GlobalVariables.STANDARD_PASSWORD); //Logueo en la pagina
     	
-    	
-    	//Declaro variable boolean para validar contenido y despues un assert para saber si es correcto el mensaje de error
-    	boolean error = loginPage.validateLockedError();
-    	
-    	//Validate que el contenido de "error" sea cierto que contenga el mensaje esperado
-    	Assert.assertTrue(error);
+    	boolean isBtnDisplayed = inventory.addToCartAndVerifyRemoveBtn(); //creacion de variable tipo boolean llamada isBtnDisplayed instanciando el metodo donde valido eso
+    	Assert.assertTrue(isBtnDisplayed); //Validacion del boton con Assert    	
     }
     
     @AfterTest
     public void closeDriver() {
-    	WrapClasses.takeScreenshot(driver, "TC02_Login_Lock");
+    	WrapClasses.takeScreenshot(driver, "TC03_VerifyRemoveBtn");    	
     	driver.quit();
     }
   

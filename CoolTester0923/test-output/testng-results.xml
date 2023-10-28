@@ -1,25 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-21T17:52:36Z" name="Default suite" finished-at="2023-10-21T17:52:41Z" duration-ms="4602">
+  <suite started-at="2023-10-28T15:32:26Z" name="RegressionAutomatedQA" finished-at="2023-10-28T15:32:42Z" duration-ms="16481">
     <groups>
     </groups>
-    <test started-at="2023-10-21T17:52:36Z" name="Default test" finished-at="2023-10-21T17:52:41Z" duration-ms="4602">
-      <class name="loginTests.TC02_Login_Lock">
-        <test-method is-config="true" signature="startWebPage()[pri:0, instance:loginTests.TC02_Login_Lock@5183d589]" started-at="2023-10-21T11:52:36Z" name="startWebPage" finished-at="2023-10-21T11:52:38Z" duration-ms="1285" status="PASS">
+    <test started-at="2023-10-28T15:32:26Z" name="TC01_Login" finished-at="2023-10-28T15:32:31Z" duration-ms="5100">
+      <class name="loginTests.TC01_Login">
+        <test-method is-config="true" signature="startWebPage()[pri:0, instance:loginTests.TC01_Login@344b8190]" started-at="2023-10-28T09:32:26Z" name="startWebPage" finished-at="2023-10-28T09:32:27Z" duration-ms="1267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startWebPage -->
-        <test-method signature="TC02()[pri:0, instance:loginTests.TC02_Login_Lock@5183d589]" started-at="2023-10-21T11:52:38Z" name="TC02" finished-at="2023-10-21T11:52:41Z" duration-ms="3201" status="PASS">
+        <test-method signature="TC01()[pri:0, instance:loginTests.TC01_Login@344b8190]" started-at="2023-10-28T09:32:27Z" name="TC01" finished-at="2023-10-28T09:32:30Z" duration-ms="3399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC01 -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:loginTests.TC01_Login@344b8190]" started-at="2023-10-28T09:32:30Z" name="closeDriver" finished-at="2023-10-28T09:32:31Z" duration-ms="428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- loginTests.TC01_Login -->
+    </test> <!-- TC01_Login -->
+    <test started-at="2023-10-28T15:32:31Z" name="TC02_Login_Lock" finished-at="2023-10-28T15:32:36Z" duration-ms="5230">
+      <class name="loginTests.TC02_Login_Lock">
+        <test-method is-config="true" signature="startWebPage()[pri:0, instance:loginTests.TC02_Login_Lock@62a8fd44]" started-at="2023-10-28T09:32:31Z" name="startWebPage" finished-at="2023-10-28T09:32:32Z" duration-ms="1318" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebPage -->
+        <test-method signature="TC02()[pri:0, instance:loginTests.TC02_Login_Lock@62a8fd44]" started-at="2023-10-28T09:32:32Z" name="TC02" finished-at="2023-10-28T09:32:36Z" duration-ms="3459" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02 -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:loginTests.TC02_Login_Lock@5183d589]" started-at="2023-10-21T11:52:41Z" name="closeDriver" finished-at="2023-10-21T11:52:41Z" duration-ms="112" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:loginTests.TC02_Login_Lock@62a8fd44]" started-at="2023-10-28T09:32:36Z" name="closeDriver" finished-at="2023-10-28T09:32:36Z" duration-ms="452" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- loginTests.TC02_Login_Lock -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- TC02_Login_Lock -->
+    <test started-at="2023-10-28T15:32:36Z" name="TC03_VerifyRemoveBtn" finished-at="2023-10-28T15:32:42Z" duration-ms="6124">
+      <class name="inventory.TC03_VerifyRemoveBtn">
+        <test-method is-config="true" signature="startWebPage()[pri:0, instance:inventory.TC03_VerifyRemoveBtn@43b0ade]" started-at="2023-10-28T09:32:36Z" name="startWebPage" finished-at="2023-10-28T09:32:37Z" duration-ms="1186" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startWebPage -->
+        <test-method signature="TC03()[pri:0, instance:inventory.TC03_VerifyRemoveBtn@43b0ade]" started-at="2023-10-28T09:32:37Z" name="TC03" finished-at="2023-10-28T09:32:41Z" duration-ms="3905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03 -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:inventory.TC03_VerifyRemoveBtn@43b0ade]" started-at="2023-10-28T09:32:41Z" name="closeDriver" finished-at="2023-10-28T09:32:42Z" duration-ms="1033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- inventory.TC03_VerifyRemoveBtn -->
+    </test> <!-- TC03_VerifyRemoveBtn -->
+  </suite> <!-- RegressionAutomatedQA -->
 </testng-results>

@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import commonClasses.DriverSetup;
 import commonClasses.GlobalVariables;
+import commonClasses.WrapClasses;
 import navigationPages.LoginPage;
 
 public class TC01_Login {
@@ -33,6 +34,7 @@ public class TC01_Login {
     
     @AfterTest
     public void closeDriver() {
+    	WrapClasses.takeScreenshot(driver, "TC01_Login");
     	driver.quit();
     }
   
